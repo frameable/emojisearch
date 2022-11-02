@@ -1,0 +1,10 @@
+{
+  "name": "emojisearch",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node test"
+  },
+  "dependencies": {
+    "emojilib": "3.0.7"
+  }
+}
