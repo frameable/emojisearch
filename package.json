@@ -6,5 +6,10 @@
   },
   "dependencies": {
     "emojilib": "3.0.7"
+  },
+  "keywords": ["emoji", "search"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frameable/emojisearch.git"
   }
 }
