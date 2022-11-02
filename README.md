@@ -1,10 +1,9 @@
-# 🔍
+# emojisearch 🔍
 
-Search emojis
+Search for emojis with single words or phrases
 
-```
-const emojisearch = require('🔍')
-
+```javascript
+const emojisearch = require('emojisearch')
 const results = emojisearch('reading', 3)
 
 // [
@@ -27,7 +26,6 @@ const results = emojisearch('reading', 3)
 //     score: 2.7498
 //   }
 // ]
-
 ```
 
 ### Comparison with `@jukben/emoji-search`
