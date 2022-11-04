@@ -109,6 +109,21 @@ const score = (query, meta, debug) => {
     }
   }
 
+  // prefix matches
+  for (const [i, term] of meta.entries()) {
+
+    const d = (i + 1) * 2;
+
+    if (term.startsWith(query))
+      boost('term_substring_direct', 5/d, term)
+
+    if (term.includes(query))
+      boost('term_substring_direct', 1/d, term)
+
+    if (stem(term).startsWith(stem(query)))
+      boost('stem_term_substring_direct', 1/d, stem(term))
+  }
+
   // apply any penalties
   s -= penalties[meta[0]] || 0;
 

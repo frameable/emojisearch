@@ -19,5 +19,9 @@ suite('main', async test => {
     assert.equal(emojisearch('face', 5).length, 5);
   });
 
+  await test('substring match', async _ => {
+    assert.deepEqual(emojisearch('ab', 3).map(r => r.name), ['ab_button', 'abacus', 'derelict_house']);
+  });
+
 });
 
