@@ -50,6 +50,8 @@ const stem = (str) => {
 
 const score = (query, meta, debug) => {
 
+  query = query.toLowerCase();
+
   qterms = query.split('_');
 
   let s = 0;

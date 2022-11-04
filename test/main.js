@@ -7,6 +7,7 @@ suite('main', async test => {
 
   await test('first match', async _ => {
     assert.equal(emojisearch('lunchtime')[0].name, 'sandwich');
+    assert.equal(emojisearch('Lunchtime')[0].name, 'sandwich');
     assert.equal(emojisearch('smoking cigarettes')[0].name, 'cigarette');
     assert.equal(emojisearch('reading')[0].name, 'closed_book');
     assert.equal(emojisearch('winning')[0].name, 'military_medal');
