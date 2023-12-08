@@ -1,6 +1,7 @@
 {
   "name": "@frameable/emojisearch",
   "version": "1.0.3",
+  "type": "module",
   "scripts": {
     "test": "node test"
   },

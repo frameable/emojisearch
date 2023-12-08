@@ -1,4 +1,5 @@
-const emoji = Object.entries(require('emojilib'))
+import emojilib from 'emojilib';
+const emoji = Object.entries(emojilib)
 
 // insert some additional keywords that should probably go upstream in emojilib
 const augmentations = {
@@ -52,7 +53,7 @@ const score = (query, meta, debug) => {
 
   query = query.toLowerCase();
 
-  qterms = query.split('_');
+  const qterms = query.split('_');
 
   let s = 0;
 
@@ -79,7 +80,7 @@ const score = (query, meta, debug) => {
     && !qterms.find(qt => negatives.includes(qt))
 
   // partial description matches
-  for (t of nterms) {
+  for (const t of nterms) {
     if (skip) continue
     if (stopwords.includes(t)) continue
     for (const qt of qterms) {
@@ -151,5 +152,5 @@ function query(q, n=100) {
   return results;
 }
 
-module.exports = query;
+export default query;
 
