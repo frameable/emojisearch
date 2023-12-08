@@ -20,7 +20,7 @@ const penalties = {
   call_me_hand: 1000
 }
 
-for ([k, v] of Object.entries(augmentations)) {
+for (const [k, v] of Object.entries(augmentations)) {
   emoji.find(e => e[1][0] == k)[1].splice(1, 0, ...v)
 }
 
